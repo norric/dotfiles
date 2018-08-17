@@ -1,0 +1,28 @@
+[user]
+	email = rickard@funnel.io
+	name = Rickard Nordstrand
+
+[alias]
+	cp = cherry-pick
+	st = status -s
+	cl = clone
+	com = commit
+	co = checkout
+	br = branch
+	wd = diff --word-diff
+	dc = diff --cached
+
+[core]
+	excludesfile = /Users/norric/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[difftool "ksdiff"]
+    cmd = "ksdiff $LOCAL $REMOTE"
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/norric/.stCommitMsg
+[diff]
+	tool = ksdiff
