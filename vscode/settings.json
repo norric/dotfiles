@@ -1,0 +1,15 @@
+{
+    "telemetry.enableTelemetry": false,
+    "editor.minimap.enabled": false,
+    "workbench.colorTheme": "Brackets Dark",
+    "git.autofetch": true,
+    "files.trimTrailingWhitespace": true,
+    "window.zoomLevel": 0,
+    "files.autoSave": "onWindowChange",
+    "editor.multiCursorModifier": "alt",
+    "workbench.activityBar.visible": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "files.associations": {
+        "*.gs": "javascript"
+    },
+}
