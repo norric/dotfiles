@@ -12,11 +12,14 @@
 	wd = diff --word-diff
 	dc = diff --cached
 
+  pul = pull
+  clon = clone
+
 [core]
 	excludesfile = /Users/norric/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [difftool "ksdiff"]
     cmd = "ksdiff $LOCAL $REMOTE"
 [mergetool "sourcetree"]
