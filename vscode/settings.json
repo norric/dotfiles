@@ -12,4 +12,7 @@
     "files.associations": {
         "*.gs": "javascript"
     },
+    "editor.tabCompletion": "on",
+    "editor.suggest.localityBonus": true,
+    "editor.formatOnSave": true,
 }
