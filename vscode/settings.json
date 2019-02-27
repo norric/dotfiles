@@ -7,7 +7,7 @@
     "window.zoomLevel": 0,
     "files.autoSave": "onWindowChange",
     "editor.multiCursorModifier": "alt",
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "files.associations": {
         "*.gs": "javascript"
@@ -15,4 +15,6 @@
     "editor.tabCompletion": "on",
     "editor.suggest.localityBonus": true,
     "editor.formatOnSave": true,
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.currentLine.enabled": false,
 }
