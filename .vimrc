@@ -2,7 +2,7 @@ set bg=dark
 set number
 syntax on
 set ruler
-set visualbell
+set novisualbell
 set encoding=utf-8
 
 set tabstop=2
