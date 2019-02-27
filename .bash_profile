@@ -12,6 +12,7 @@ alias ls="CLICOLOR_FORCE=1 ls -G"
 alias l="ls -alfGF | less"
 alias du="du -h"
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
+alias git-prune-branches="git remote prune origin && git branch -vv | awk '/origin\/.*: gone]/{print\$1}' | xargs git branch -d"
 
 export EDITOR="vim"
 export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --RAW-CONTROL-CHARS --HILITE-UNREAD --tabs=4 --no-init --window=-4'
@@ -29,6 +30,6 @@ export LESS_TERMCAP_ue=$'\E[0m'        # reset underline
 parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
-export PS1="\[\033[38;5;30m\]\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
+#export PS1="\[\033[38;5;30m\]\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
