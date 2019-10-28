@@ -1,7 +1,6 @@
 {
     "telemetry.enableTelemetry": false,
     "editor.minimap.enabled": false,
-    "workbench.colorTheme": "Brackets Dark",
     "git.autofetch": true,
     "files.trimTrailingWhitespace": true,
     "window.zoomLevel": 0,
@@ -17,4 +16,22 @@
     "editor.formatOnSave": true,
     "gitlens.hovers.currentLine.over": "line",
     "gitlens.currentLine.enabled": false,
+    "files.exclude": {
+        "**/dist": true,
+        "**/lib": true
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.colorTheme": "Brackets Dark",
+    "editor.largeFileOptimizations": false,
 }
