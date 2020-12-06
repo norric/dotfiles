@@ -4,7 +4,7 @@
     "git.autofetch": true,
     "files.trimTrailingWhitespace": true,
     "window.zoomLevel": 0,
-    "files.autoSave": "onWindowChange",
+    "files.autoSave": "onFocusChange",
     "editor.multiCursorModifier": "alt",
     "workbench.activityBar.visible": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
@@ -32,6 +32,6 @@
     "[javascript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "workbench.colorTheme": "Brackets Dark",
     "editor.largeFileOptimizations": false,
+    "eslint.nodePath": "",
 }
