@@ -3,6 +3,7 @@
 	name = Rickard Nordstrand
 
 [alias]
+  p = pull
 	cp = cherry-pick
 	st = status -s
 	cl = clone
@@ -17,6 +18,8 @@
 
 [core]
 	excludesfile = /Users/norric/.gitignore_global
+  hookspath = /Users/norric/.git/hooks/
+
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -29,3 +32,5 @@
 	template = /Users/norric/.stCommitMsg
 [diff]
 	tool = ksdiff
+[hub]
+	protocol = https
