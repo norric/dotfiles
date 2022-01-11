@@ -3,7 +3,7 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
 #export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 # Path to your oh-my-zsh installation.
@@ -102,3 +102,34 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias code="/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code"
 export PATH="/usr/local/sbin:$PATH"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh" || true
+
+# This creates the var currentDir to use later on
+function iterm2_print_user_vars() {
+    BRANCH=$((git branch 2> /dev/null) | grep \* | cut -c3-)
+    CURRENT_DIR="${PWD##*/}"
+    iterm2_set_user_var currentDir $CURRENT_DIR
+    iterm2_set_user_var gitBranch $BRANCH
+    
+    if [ -n "$BRANCH" ]
+    then
+        iterm2_set_user_var gitRepo "$CURRENT_DIR $BRANCH"
+    else
+        iterm2_set_user_var gitRepo ""
+    fi
+}
+
+source ~/funnel/access-team-shared-config/zsh-aliases.sh
+#alias av-exec-qwaya-readonly="aws-vault exec qwaya-readonly -- "
+#alias av-exec-qwaya-admin="aws-vault exec qwaya-admin -- "
+#alias av-login-qwaya-readonly="aws-vault login qwaya-readonly"
+#alias av-login-qwaya-admin="aws-vault login qwaya-admin"
+
+alias ycode="ykman oath code --single | pbcopy"
+
+export YKMAN_OATH_CREDENTIAL_NAME=arn:aws:iam::360627334532:user/rickard
+export AWS_VAULT_PROMPT=ykman
+
+eval "$(jump shell)"
+eval "$(starship init zsh)"
