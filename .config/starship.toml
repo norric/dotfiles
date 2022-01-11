@@ -1,0 +1,16 @@
+[aws]
+#disabled = true
+
+[aws.region_aliases]
+us-east-1 = "prod"
+eu-west-1 = "stage"
+eu-central-1 = "eu-prod"
+
+[package]
+disabled = true
+
+[nodejs]
+symbol = "⬢ "
+
+[docker_context]
+disabled = true
